@@ -1,0 +1,13 @@
+@media (min-width: 1025px){
+  .menu-list{
+    &__item{
+      &:hover{
+        &::before{
+            left:0;
+            width: 100%;
+            opacity:1;
+        }
+      }
+    }
+  }
+}
