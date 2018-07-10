@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 </head>
 <body>
+  <div id="preloader">
+    <div class="spinner"></div> 
+  </div>
   <header class="header" id="header">
     <div class="wrapper wrapper--small">
       <div class="header__nav clearfix">
@@ -62,20 +65,40 @@
   </header>
   <main class="main">
     <div class="wrapper wrapper--small">
-    <div class="">
-      <div class="">
-        <span><strong>Welcome!</strong></span>
-        <p>The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it too...</p>
-        <p>Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!</p>
-        <p>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;)Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our <b>nvite</b> page here too!</p>
-      </div>
-      <form action="#">
-         
-      </form>
-    </div>
+      <section class="welcome-block">
+        <div class="welcome-block__desription">
+          <h1><strong>Welcome!</strong></h1>
+          <p>The biggest envato community meetup in Bangladesh is happening right now! And you can be a part of it too...</p>
+          <p>Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!</p>
+          <p>It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;)Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our <b>nvite</b> page here too!</p>
+        </div>
+        <form action="#" class="welcome-block__form" id="form">
+          <span>Sign up for our event</span>
+          <div class="input-holder">
+            <label for="name">Enter your name:</label>
+            <input type="text" placeholder="" id="name" required>
+          </div>
+           <div class="input-holder">
+            <label for="email">Enter your email:</label>
+            <input type="text" placeholder="" id="email" required>
+          </div>
+          <div class="input-holder">
+            <label for="phone">Phone number:</label>
+            <input type="text" placeholder="" id="phone" required>
+          </div>
+          <div class="input-holder">
+            <label for="user">Envato Username:</label>
+            <input type="text" placeholder="" id="user" required>
+          </div>
+          <input type="submit" value="Let me in!" class="form-submit">
+          <p>Hurry up, Limited seats availble <br>*we will never spam your email</p>
+        </form>
+      </section>
     </div>
   </main>
   <footer class="footer"></footer>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

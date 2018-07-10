@@ -37,3 +37,31 @@ var seconds = (seconds.toLocaleString(undefined,{minimumIntegerDigits: 2}));
     document.getElementById("countdown").innerHTML = "THE CAMPAIGN BEGINS";
   }
 }, 1000);
+
+var preloader = document.getElementById("preloader");
+
+window.addEventListener('load', function(){
+  preloader.style.display = 'none';
+})
+
+$(document).ready(function($) {
+var holder = $(".input-holder input")
+ holder.focus(function(){
+   $(this).parent().addClass("active");
+
+  }).blur(function(){
+       $(this).parent().removeClass("active");
+  })
+});    
+ 
+$(document).ready(function(){
+   $('form .input-holder input').each(function() { if($(this).val().length > 0) $('form .input-holder label[for="' + $(this).attr('id') + '"]').hide();
+$(this).change(function() {
+   if($(this).val().length > 0)
+       $('form .input-holder label[for="' + $(this).attr('id') + '"]').addClass('disabled');
+   else 
+       $('form .input-holder label[for="' + $(this).attr('id') + '"]').removeClass('disabled');
+});
+ });
+
+});

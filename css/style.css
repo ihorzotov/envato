@@ -57,7 +57,6 @@ input, textarea {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-appearance: none;
-  border: none;
 }
 
 input[type="button"], input[type="submit"] {
@@ -135,6 +134,41 @@ span {
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 50px #fff;
   -webkit-text-fill-color: #545454;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #90d23d;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#preloader {
+  height: 100%;
+  width: 100%;
+  background: #888;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -292,4 +326,99 @@ transform: skewY(-2deg);*/
 /*===========================================*/
 .main {
   margin-top: 150px;
+}
+
+.welcome-block {
+  font-size: 0;
+  position: relative;
+}
+
+.welcome-block__desription {
+  font-size: 14px;
+  width: 50%;
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+.welcome-block__desription h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.welcome-block__desription p + p {
+  margin-top: 20px;
+}
+
+.welcome-block__form {
+  display: inline-block;
+  width: 45%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  font-size: 19px;
+  padding: 30px 25px 25px 25px;
+  border: 1px solid #bebebe;
+  text-align: center;
+}
+
+.welcome-block__form .form-submit {
+  font-size: 22px;
+  color: #fff;
+  background: #90d23d;
+  border: none;
+  margin: 35px 0 0 0;
+  transition: background .15s;
+}
+
+.welcome-block__form span {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.welcome-block__form p {
+  margin-top: 20px;
+  color: #6c6c6c;
+  font-size: 15px;
+}
+
+.welcome-block__form input {
+  padding: 0 20px;
+  width: 100%;
+  height: 55px;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  transition: border .3s;
+}
+
+.welcome-block__form label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #bebebe;
+  transition: top .3s , left .3s, font-size .3s , color .3s;
+}
+
+.welcome-block__form label.disabled {
+  left: 5px;
+  top: -30%;
+  font-size: 15px;
+}
+
+.welcome-block__form .input-holder {
+  position: relative;
+  margin: 35px 0 0 0;
+}
+
+.welcome-block__form .input-holder.active label {
+  left: 5px;
+  top: -30%;
+  font-size: 15px;
+  color: #90d23d;
+}
+
+.welcome-block__form .input-holder.active input {
+  border: 1px solid #90d23d;
 }

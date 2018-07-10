@@ -4,4 +4,7 @@
     width: 100%;
     opacity: 1;
   }
+  .welcome-block__form .form-submit:hover {
+    background: #90d23ddb;
+  }
 }
