@@ -17,4 +17,23 @@
       }
     } 
   }
+  table{
+    tr{
+      &:nth-child(even){
+        &:hover{
+          background-color:#373737f2;
+        }
+      }
+      &:nth-child(odd){
+        &:hover{
+          background-color:#4b4d4ffa;
+        }
+      }
+    }
+  }
+  .button{
+    &:hover{
+      background-color:#90d23dd6;
+    }
+  }
 }
