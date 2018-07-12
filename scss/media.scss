@@ -36,4 +36,24 @@
       background-color:#90d23dd6;
     }
   }
+  .speakers-section{
+    .container-speaker{
+      &:hover{
+        .container-speaker__hover{
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .footer{
+    .js-anchor{
+      &:hover{
+        color:#333;
+      }
+    }
+  }
 }
+// @media (max-width: 1279px){
+    
+// }
