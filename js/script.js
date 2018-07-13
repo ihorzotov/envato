@@ -110,3 +110,11 @@ $(document).on("click",".js-anchor a", function (event) {
            top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 800);
 });
+
+var hamburger = $('.header__nav .hamburger');
+
+  hamburger.click(function(){
+    $(this).toggleClass('open');
+    $(this).parent().toggleClass("active");
+    $('body').toggleClass('overflow');
+  });
