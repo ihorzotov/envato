@@ -124,6 +124,10 @@ body.overflow {
 
 /*MAIN STYLES*/
 /*===========================================*/
+.lt-ie9 .icons__list{
+  transform: translateY(17%);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1212,6 +1216,9 @@ h1 {
 }
 
 @media (max-width: 1023px) {
+  .lt-ie9 .icons__list{
+    transform: translateY(13%);
+  }
   .header__nav {
     text-align: center;
   }
