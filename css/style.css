@@ -1181,13 +1181,13 @@ h1 {
 }
 
 @supports (-ms-accelerator: true) {
-  html {
-    overflow: hidden;
-    height: 100%;
+  .icons__list{
+    transform:translateY(17%);
   }
-  body {
-    overflow: auto;
-    height: 100%;
+  @media (max-width: 1023px){
+     .icons__list{
+      transform:translateY(13%);
+    }
   }
 }
 
@@ -1198,8 +1198,8 @@ h1 {
   }
   @media (max-width: 1023px){
      .icons__list{
-    transform:translateY(13%);
-  }
+      transform:translateY(13%);
+    }
   }
 }
 
